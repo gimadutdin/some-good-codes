@@ -4,11 +4,13 @@
 class Node
 {
     private:
-    int value;
+    int key, value;
     Node *left, *right;
 
     public:
-    Node(int value);
+    Node(int key, int value);
+    int getKey();
+    void setValue(int value);
     int getValue();
 
     void setLeft(Node *left);

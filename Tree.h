@@ -3,19 +3,23 @@
 
 #include "Node.h"
 
-class BST
-{
+class Tree
+{//binary search tree
     private:
     Node *root;
     int nodeCount;
 
+    void addNode(Node *v, int key, int value);
+    void show(Node *v, int level = 0);
+
+
     public:
     Tree();
 
-    void addNode(Node *node);
-    Node *findNode(int value);
+    void addNode(int key, int value);
+    Node *findNode(int key);
 
-    void show(Node *v = root, level = 0);
+    void show();
 };
 
 #endif // TREE_H_INCLUDED

@@ -1,10 +1,21 @@
 #include "Node.h"
 
-Node::Node(int value)
+Node::Node(int key, int value)
 {
+    this->key = key;
     this->value = value;
     this->left = nullptr;
     this->right = nullptr;
+}
+
+int Node::getKey()
+{
+    return this->key;
+}
+
+void Node::setValue(int value)
+{
+    this->value = value;
 }
 
 int Node::getValue()
