@@ -60,3 +60,24 @@ void Tree::show()
 {
     Tree::show(root);
 }
+
+Node *Tree::findNode(Node *v, int key)
+{
+    if (v == nullptr)
+        return nullptr;
+    if (key < v->getKey())
+    {
+        return findNode(v->getLeft(), key);
+    } else if (key > v->getKey())
+    {
+        return findNode(v->getRight(), key);
+    } else//key == v->getKey()
+    {
+        return v;
+    }
+}
+
+Node *Tree::findNode(int key)
+{
+    return Tree::findNode(root, key);
+}

@@ -11,6 +11,7 @@ class Tree
 
     void addNode(Node *v, int key, int value);
     void show(Node *v, int level = 0);
+    Node *findNode(Node *v, int key);
 
 
     public:
