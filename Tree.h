@@ -12,6 +12,7 @@ class Tree
     void addNode(Node *v, int key, int value);
     void show(Node *v, int level = 0);
     Node *findNode(Node *v, int key);
+    void deleteNode(Node *v, int key);
 
 
     public:
@@ -19,6 +20,7 @@ class Tree
 
     void addNode(int key, int value);
     Node *findNode(int key);
+    void deleteNode(int key);
 
     void show();
 };

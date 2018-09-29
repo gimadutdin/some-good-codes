@@ -9,6 +9,7 @@ class Node
 
     public:
     Node(int key, int value);
+    void setKey(int key);
     int getKey();
     void setValue(int value);
     int getValue();

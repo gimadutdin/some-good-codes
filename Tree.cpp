@@ -81,3 +81,54 @@ Node *Tree::findNode(int key)
 {
     return Tree::findNode(root, key);
 }
+
+void Tree::deleteNode(Node *v, int key)
+{
+    if (v == nullptr) return;
+    if (key < v->getKey())
+    {
+        deleteNode(v->getLeft(), key);
+    } else if (key > v->getKey())
+    {
+        deleteNode(v->getRight(), key);
+    } else//key == v->getKey()
+    {
+        if (v->getLeft() != nullptr && v->getRight() != nullptr)
+        {
+            //find minimal element in right subtree of v
+            Node *t = v->getRight();
+            while (t->getLeft() != nullptr)
+                t = t->getLeft();
+            v->setKey(t->getKey());
+            v->setValue(t->getValue());
+            deleteNode(v->getRight(), t->getKey());
+        } else
+        {
+            if (v->getLeft() != nullptr)
+            {
+                Node *oldLeft = v->getLeft();
+                v->setKey(oldLeft->getKey());
+                v->setValue(oldLeft->getValue());
+                v->setLeft(oldLeft->getLeft());
+                v->setRight(oldLeft->getRight());
+                delete oldLeft;
+            } else if (v->getRight() != nullptr)
+            {
+                Node *oldRight = v->getRight();
+                v->setKey(oldRight->getKey());
+                v->setValue(oldRight->getValue());
+                v->setLeft(oldRight->getLeft());
+                v->setRight(oldRight->getRight());
+                delete oldRight;
+            } else
+            {
+                delete v;
+            }
+        }
+    }
+}
+
+void Tree::deleteNode(int key)
+{
+    deleteNode(root, key);
+}

@@ -8,6 +8,11 @@ Node::Node(int key, int value)
     this->right = nullptr;
 }
 
+void Node::setKey(int key)
+{
+    this->key = key;
+}
+
 int Node::getKey()
 {
     return this->key;
