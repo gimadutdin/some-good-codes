@@ -10,7 +10,7 @@ void threadFunction(int id, std::mutex &m)
 {
 	std::lock_guard<std::mutex> loc(m); //pri svoem unichtozhenii razblokiruet m, a unichtozhenie garda budet tolko pri vihode iz funkcii
 	//printf("Hello from thread %d \n", id); // works correct without using mutexes
-	m.lock();
+	//m.lock();
 	/*
 	try {
 		g();
@@ -23,7 +23,7 @@ void threadFunction(int id, std::mutex &m)
 
 	*/
 	std::cout << "Hello from thread " << id << "!" << std::endl; // if we write this we need to use mutexes
-	m.unlock();
+	//m.unlock();
 }
 
 int main()
