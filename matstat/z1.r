@@ -1,47 +1,56 @@
-setwd("D:\\Documents\\РЈР§Р•Р‘Рђ\\РњР°С‚СЃС‚Р°С‚\\Р·Р°РґР°РЅРёРµ1")
+setwd("D:\\Documents\\УЧЕБА\\Матстат\\задание1")
 getwd()
 
 data_file = read.csv("r1z1.csv")
 x = data_file$X
 n = length(x)
 
-cat("РћР±СЊРµРј РІС‹Р±РѕСЂРєРё = ", n, "\n")
+cat("Обьем выборки = ", n, "\n")
 minn = min(x)
 maxx = max(x)
-cat("РњРёРЅРёРјСѓРј = ", minn, "\n")
-cat("РњР°РєСЃРёРјСѓРј = ", maxx, "\n")
-cat("Р Р°Р·РјР°С… РІС‹Р±РѕСЂРєРё = ", maxx - minn, "\n")
+cat("Минимум = ", minn, "\n")
+cat("Максимум = ", maxx, "\n")
+cat("Размах выборки = ", maxx - minn, "\n")
 
 mo = sum(x) / n
-cat("РњР°С‚РµРјР°С‚РёС‡РµСЃРєРѕРµ РѕР¶РёРґР°РЅРёРµ = ", mo, "\n")
+cat("Математическое ожидание = ", mo, "\n")
 
 disp = sum((x - mo)^2) / n
-cat("Р”РёСЃРїРµСЂСЃРёСЏ:", disp, "\n")
+cat("Дисперсия:", disp, "\n")
+
+cat("Дисперсия несмещенная = ", disp*n/(n-1), "\n")
 
 stand_otkl = sqrt(disp)
-cat("РЎС‚Р°РЅРґР°СЂС‚РЅРѕРµ РѕС‚РєР»РѕРЅРµРЅРёРµ = ", stand_otkl, "\n")
+cat("Стандартное отклонение = ", stand_otkl, "\n")
 
 ko_assim = sum((x - mo)^3) / (n*(stand_otkl^3))
-cat("РљРѕСЌС„С„РёС†РёРµРЅС‚ Р°СЃСЃРёРјРјРµС‚СЂРёРё = ", ko_assim, "\n")
+cat("Коэффициент ассимметрии = ", ko_assim, "\n")
 
 x_sorted = sort(x)
 
 med = kvantil(0.5)
-cat("РњРµРґРёР°РЅР° = ", med, "\n")
+cat("Медиана = ", med, "\n")
 
 interkvart = kvantil(0.75) - kvantil(0.25)
-cat("РРЅС‚РµСЂРєРІР°СЂС‚РёР»СЊРЅР°СЏ С€РёСЂРѕС‚Р° = ", interkvart, "\n")
+cat("Интерквартильная широта = ", interkvart, "\n")
 
 
 kvantil <- function(q)
 {
     kv = 0
-    if ((n - 1)*q == floor((n - 1)*q))
+    if (abs((n - 1)*q - floor((n - 1)*q)) < 0.00001)
     {
-        kv = x[(n - 1)*q + 1]
+        kv = x_sorted[(n - 1)*q + 1]
     } else # <
     {
-        kv = (x[floor((n - 1)*q + 1)] + x[floor((n - 1)*q + 2)]) / 2
+        kv = (x_sorted[floor((n - 1)*q + 1)] + x_sorted[floor((n - 1)*q + 2)]) / 2
     }
     return(kv)
 }
+
+
+
+
+
+
+#med = quantile(x, probs = 0.5)

@@ -6,5 +6,4 @@ x = data_file$X
 n = length(x)
 
 xx = sort(x)
-v = seq(from = 1/n, to = 1, by = 1/n)
-plot(xx, v, type = "l", col="blue", lwd=2, main="нда")
+plot(xx, (1:n)/n, type = "S", col="blue", lwd=2, main="нда")
