@@ -26,7 +26,7 @@ OR             printf("OR\n");
 NOT            printf("NOT\n");
 "("            printf("OP\n");
 ")"            printf("CP\n");
-[a-zA-Z][a-zA-Z0-9]* printf("IDENTIFIER");
+[a-zA-Z][a-zA-Z0-9]* printf("IDENTIFIER\n");
 [1-9][0-9]*          printf("NUMBER\n");
 [ \t]           {/*ignore whitespace*/}
 %%
