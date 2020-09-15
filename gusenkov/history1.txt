@@ -1,0 +1,390 @@
+rogramist@programist-desktop:~/Documents$ ls
+assembly_programming  boot.bin  floppy.img  kolibri.iso  myos.iso  OSDEV  OSDEV_STUFF  yacc_lex_lessons
+programist@programist-desktop:~/Documents$ cd yacc_lex_lessons/
+programist@programist-desktop:~/Documents/yacc_lex_lessons$ ls
+example1  task_09_09_20
+programist@programist-desktop:~/Documents/yacc_lex_lessons$ cd task_09_09_20/
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ls
+lex.yy.c  task1  task1_bkp  task1.l  task1.l.save
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ lex task1.l
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ gcc -o task1 lex.yy.c 
+task1.l: In function ‘yylex’:
+lex.yy.c:658:28: error: expected ‘;’ before ‘break’
+ #define YY_BREAK /*LINTED*/break;
+                            ^
+task1.l:16:2: note: in expansion of macro ‘YY_BREAK’
+ "/"            printf("DIVIDE\n");
+  ^~~~~~~~
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ mv compile.sh build_run.sh
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ls
+build_run.sh  lex.yy.c  task1  task1_bkp  task1.l  task1.l.save
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ll
+total 100
+drwxr-xr-x 2 programist programist  4096 сен 15 01:57 ./
+drwxr-xr-x 4 programist programist  4096 сен 15 00:53 ../
+-rw-r--r-- 1 programist programist    47 сен 15 01:57 build_run.sh
+-rw-r--r-- 1 programist programist 47776 сен 15 01:54 lex.yy.c
+-rw-r--r-- 1 programist programist 27984 сен 15 00:53 task1
+-rw-r--r-- 1 programist programist   945 сен 15 00:53 task1_bkp
+-rw-r--r-- 1 programist programist   664 сен 15 01:56 task1.l
+-rw-r--r-- 1 programist programist   543 сен 15 00:53 task1.l.save
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l.save 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1_bkp
+Use "fg" to return to nano.
+
+[1]+  Stopped                 nano task1_bkp
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ mv task1.l.save task1_old2
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ mv task1_old2 task1_old2.l
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ll
+total 104
+drwxr-xr-x 2 programist programist  4096 сен 15 01:59 ./
+drwxr-xr-x 4 programist programist  4096 сен 15 00:53 ../
+-rw-r--r-- 1 programist programist    47 сен 15 01:57 build_run.sh
+-rw-r--r-- 1 programist programist 47776 сен 15 01:54 lex.yy.c
+-rw-r--r-- 1 programist programist 27984 сен 15 00:53 task1
+-rw-r--r-- 1 programist programist   945 сен 15 00:53 task1_bkp
+-rw-r--r-- 1 programist programist  1024 сен 15 01:58 .task1_bkp.swp
+-rw-r--r-- 1 programist programist   664 сен 15 01:56 task1.l
+-rw-r--r-- 1 programist programist   543 сен 15 00:53 task1_old2.l
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ren
+
+Command 'ren' not found, but there are 18 similar ones.
+
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ rn
+
+Command 'rn' not found, but can be installed with:
+
+sudo apt install trn4
+
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ mv task1_bkp task1_old1.l
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ll
+total 104
+drwxr-xr-x 2 programist programist  4096 сен 15 02:00 ./
+drwxr-xr-x 4 programist programist  4096 сен 15 00:53 ../
+-rw-r--r-- 1 programist programist    47 сен 15 01:57 build_run.sh
+-rw-r--r-- 1 programist programist 47776 сен 15 01:54 lex.yy.c
+-rw-r--r-- 1 programist programist 27984 сен 15 00:53 task1
+-rw-r--r-- 1 programist programist  1024 сен 15 01:58 .task1_bkp.swp
+-rw-r--r-- 1 programist programist   664 сен 15 01:56 task1.l
+-rw-r--r-- 1 programist programist   945 сен 15 00:53 task1_old1.l
+-rw-r--r-- 1 programist programist   543 сен 15 00:53 task1_old2.l
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1_bkp
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1_old
+task1_old1.l  task1_old2.l  
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1_old
+task1_old1.l  task1_old2.l  
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1_old1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ll
+total 104
+drwxr-xr-x 2 programist programist  4096 сен 15 02:02 ./
+drwxr-xr-x 4 programist programist  4096 сен 15 00:53 ../
+-rw-r--r-- 1 programist programist    47 сен 15 01:57 build_run.sh
+-rw-r--r-- 1 programist programist 47776 сен 15 01:54 lex.yy.c
+-rw-r--r-- 1 programist programist 27984 сен 15 00:53 task1
+-rw-r--r-- 1 programist programist  1024 сен 15 01:58 .task1_bkp.swp
+-rw-r--r-- 1 programist programist   664 сен 15 01:56 task1.l
+-rw-r--r-- 1 programist programist   945 сен 15 00:53 task1_old1.l
+-rw-r--r-- 1 programist programist   543 сен 15 00:53 task1_old2.l
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano .task1_bkp.swp 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ rm .task1_bkp.swp 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ll
+total 100
+drwxr-xr-x 2 programist programist  4096 сен 15 02:03 ./
+drwxr-xr-x 4 programist programist  4096 сен 15 00:53 ../
+-rw-r--r-- 1 programist programist    47 сен 15 01:57 build_run.sh
+-rw-r--r-- 1 programist programist 47776 сен 15 01:54 lex.yy.c
+-rw-r--r-- 1 programist programist 27984 сен 15 00:53 task1
+-rw-r--r-- 1 programist programist   664 сен 15 01:56 task1.l
+-rw-r--r-- 1 programist programist   945 сен 15 00:53 task1_old1.l
+-rw-r--r-- 1 programist programist   543 сен 15 00:53 task1_old2.l
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ chmod +x build_run.sh
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+,
+COMMA
+
+AVERAGE 2*1377 ALL FOR 12 && 78
+AVERAGE
+ NUMBER
+MULTIPLY
+NUMBER
+ ALL
+ FOR
+ NUMBER
+ && NUMBER
+
+AVERAGE 2 * 464                                                                                
+AVERAGE
+ NUMBER
+ MULTIPLY
+ NUMBER
+
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+Use "fg" to return to nano.
+
+[2]+  Stopped                 nano task1.l
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+AVERAGE 2*1377 ALL FOR 12 && 78
+AVERAGE
+ NUMBER
+MULTIPLY
+NUMBER
+ ALL
+ FOR
+ NUMBER
+ && NUMBER
+
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+task1.l: In function ‘yylex’:
+task1.l:21:9: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+ [\t]           {printf("");}
+         ^~
+AVERAGE 2*1377 ALL FOR 12 && 78
+AVERAGE
+ NUMBER
+MULTIPLY
+NUMBER
+ ALL
+ FOR
+ NUMBER
+ && NUMBER
+
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+h                                                                                       
+IDENTIFIER
+AVERAGE 2*1377 ALL FOR 12 && 78
+AVERAGE
+NUMBER
+MULTIPLY
+NUMBER
+ALL
+FOR
+NUMBER
+&&NUMBER
+
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+AVERAGE 2*1377 ALL FOR         
+AVERAGE
+NUMBER
+MULTIPLY
+NUMBER
+ALL
+FOR
+
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+/usr/bin/m4:stdin:1365: ERROR: end of file in string
+/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/libfl.so: undefined reference to `yylex'
+collect2: error: ld returned 1 exit status
+./build_run.sh: line 3: ./task1: No such file or directory
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+task1.l:19: missing quote
+gcc: error: lex.yy.c: No such file or directory
+./build_run.sh: line 3: ./task1: No such file or directory
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+/usr/bin/m4:stdin:1365: ERROR: end of file in string
+/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/libfl.so: undefined reference to `yylex'
+collect2: error: ld returned 1 exit status
+./build_run.sh: line 3: ./task1: No such file or directory
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano build_run.sh 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+AND
+<stdin>:1: incomplete name definition
+AVERAGE
+<stdin>:2: incomplete name definition
+^Cprogramist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano build_run.sh 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+/usr/bin/m4:stdin:1365: ERROR: end of file in string
+/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/libfl.so: undefined reference to `yylex'
+collect2: error: ld returned 1 exit status
+./build_run.sh: line 3: ./task1: No such file or directory
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ flex --version
+flex 2.6.4
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+task1.l:42: premature EOF
+gcc: error: lex.yy.c: No such file or directory
+./build_run.sh: line 3: ./task1: No such file or directory
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+/usr/bin/m4:stdin:1373: ERROR: end of file in string
+/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/libfl.so: undefined reference to `yylex'
+collect2: error: ld returned 1 exit status
+./build_run.sh: line 3: ./task1: No such file or directory
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+/usr/bin/m4:stdin:1373: ERROR: end of file in string
+/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/libfl.so: undefined reference to `yylex'
+collect2: error: ld returned 1 exit status
+./build_run.sh: line 3: ./task1: No such file or directory
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano build_run.sh 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+AVERAGE
+<stdin>:1: incomplete name definition
+^X^Cprogramist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano build_run.sh 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano build_run.sh 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+/usr/bin/m4:stdin:1365: ERROR: end of file in string
+/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/libfl.so: undefined reference to `yylex'
+collect2: error: ld returned 1 exit status
+./build_run.sh: line 3: ./task1: No such file or directory
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+<>
+NEQ
+
+ddd
+IDENTIFIER
+7878
+NUMBER
+
+^^^
+^^^
+^[[A^[[A
+	DENTIFIER	DENTIFIER
+()^[[D^XOP 
+CP
+	DENTIFIER^Z
+[3]+  Stopped                 ./build_run.sh
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano ~/.nanorc
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano ~/.nanorc
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano -c task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano -c task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+Use "fg" to return to nano.
+
+[4]+  Stopped                 nano task1.l
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ man nano
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ man nano
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ls /usr/share/nano/
+asm.nanorc        cmake.nanorc   default.nanorc  go.nanorc     java.nanorc        makefile.nanorc  nanohelp.nanorc  ocaml.nanorc  po.nanorc          ruby.nanorc  tcl.nanorc
+autoconf.nanorc   c.nanorc       elisp.nanorc    groff.nanorc  javascript.nanorc  man.nanorc       nanorc.nanorc    patch.nanorc  postgresql.nanorc  rust.nanorc  texinfo.nanorc
+awk.nanorc        css.nanorc     fortran.nanorc  guile.nanorc  json.nanorc        mgp.nanorc       nftables.nanorc  perl.nanorc   pov.nanorc         sh.nanorc    tex.nanorc
+changelog.nanorc  debian.nanorc  gentoo.nanorc   html.nanorc   lua.nanorc         mutt.nanorc      objc.nanorc      php.nanorc    python.nanorc      spec.nanorc  xml.nanorc
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano ~/.nanorc
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano lex.yy.c 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano /usr/share/nano/asm.nanorc
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ touch /usr/share/nano/lex.nanorc
+touch: cannot touch '/usr/share/nano/lex.nanorc': Permission denied
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ sudo touch /usr/share/nano/lex.nanorc
+[sudo] password for programist: 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano /usr/share/nano/lex.nanorc
+Use "fg" to return to nano.
+
+[5]+  Stopped                 nano /usr/share/nano/lex.nanorc
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano /usr/share/nano/lex.nanorc
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano /usr/share/nano/lex.nanorc
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ sudo nano /usr/share/nano/lex.nanorc
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ sudo touch /usr/share/nano/yacc.nanorc
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ sudo nano /usr/share/nano/yacc.nanorc
+Error in /usr/share/nano/lex.nanorc on line 11: Bad regex "*/": Invalid preceding regular expression
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ sudo nano /usr/share/nano/yacc.nanorc
+Error in /usr/share/nano/yacc.nanorc on line 11: Bad regex "*/": Invalid preceding regular expression
+Error in /usr/share/nano/lex.nanorc on line 11: Bad regex "*/": Invalid preceding regular expression
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ sudo nano /usr/share/nano/yacc.nanorc
+Error in /usr/share/nano/yacc.nanorc on line 11: Bad regex "*/": Invalid preceding regular expression
+Error in /usr/share/nano/lex.nanorc on line 11: Bad regex "*/": Invalid preceding regular expression
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ sudo nano /usr/share/nano/c.nanorc
+Error in /usr/share/nano/yacc.nanorc on line 11: Bad regex "*/": Invalid preceding regular expression
+Error in /usr/share/nano/lex.nanorc on line 11: Bad regex "*/": Invalid preceding regular expression
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ sudo nano /usr/share/nano/yacc.nanorc
+Error in /usr/share/nano/yacc.nanorc on line 11: Bad regex "*/": Invalid preceding regular expression
+Error in /usr/share/nano/lex.nanorc on line 11: Bad regex "*/": Invalid preceding regular expression
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ sudo nano /usr/share/nano/lex.nanorc
+Error in /usr/share/nano/lex.nanorc on line 11: Bad regex "*/": Invalid preceding regular expression
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ sudo nano /usr/share/nano/lex.nanorc
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano ~/.nanorc
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./task1 
+AVERAGE 2*1377 ALL FOR X > 123 * (abc+yyy+7-u)
+AVERAGE
+NUMBER
+MULTIPLY
+NUMBER
+ALL
+FOR
+IDENTIFIERGREATER
+NUMBER
+MULTIPLY
+OP
+IDENTIFIERPLUS
+IDENTIFIERPLUS
+NUMBER
+MINUS
+IDENTIFIERCP
+
+^C
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ nano task1.l 
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ ./build_run.sh 
+AVERAGE 2*1377 ALL FOR X > 123 * (abc+yyy+7-u)
+AVERAGE
+NUMBER
+MULTIPLY
+NUMBER
+ALL
+FOR
+IDENTIFIER
+GREATER
+NUMBER
+MULTIPLY
+OP
+IDENTIFIER
+PLUS
+IDENTIFIER
+PLUS
+NUMBER
+MINUS
+IDENTIFIER
+CP
+
+AVERAGE 2*1377 ALL FOR X > 123 * (abc+yyy+7-u) ggg, h, jj
+AVERAGE
+NUMBER
+MULTIPLY
+NUMBER
+ALL
+FOR
+IDENTIFIER
+GREATER
+NUMBER
+MULTIPLY
+OP
+IDENTIFIER
+PLUS
+IDENTIFIER
+PLUS
+NUMBER
+MINUS
+IDENTIFIER
+CP
+IDENTIFIER
+COMMA
+IDENTIFIER
+COMMA
+IDENTIFIER
+
+^X^Z
+[6]+  Stopped                 ./build_run.sh
+programist@programist-desktop:~/Documents/yacc_lex_lessons/task_09_09_20$ 
